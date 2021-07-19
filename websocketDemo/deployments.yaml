@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: websocketDemo
+  name: nginx-deployment
   labels:
-    app: websocketDemo
+    app: nginx
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
-      app: websocketDemo
+      app: nginx
   template:
     metadata:
       labels:
-        app: websocketDemo
+        app: nginx
     spec:
       containers:
-      - name: websocketDemo
-        image: websocketDemo:1.0.0
+      - name: nginx
+        image: nginx:1.14.2
         ports:
         - containerPort: 80
