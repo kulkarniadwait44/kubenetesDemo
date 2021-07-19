@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: websocketDemo
+  labels:
+    app: websocketDemo
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: websocketDemo
+  template:
+    metadata:
+      labels:
+        app: websocketDemo
+    spec:
+      containers:
+      - name: websocketDemo
+        image: websocketDemo:1.0.0
+        ports:
+        - containerPort: 80
