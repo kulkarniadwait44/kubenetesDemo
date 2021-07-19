@@ -15,7 +15,7 @@ spec:
         app: websocketdemo
     spec:
       containers:
-      - name: websocketDemo
-        image: websocketDemo:1.0.0
+      - name: websocketdemo
+        image: websocketdemo:1.0.0
         ports:
         - containerPort: 80
