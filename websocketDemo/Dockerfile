@@ -1,4 +1,4 @@
 FROM openjdk:11
-ADD target/websocketDemo-0.0.1-SNAPSHOT.jar
+ADD target/websocketDemo-0.0.1-SNAPSHOT.jar websocketDemo-0.0.1-SNAPSHOT.jar
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","websocketDemo-0.0.1-SNAPSHOT.jar"]
