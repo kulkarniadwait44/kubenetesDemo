@@ -29,17 +29,3 @@ spec:
               port: 8085
             initialDelaySeconds: 5
       restartPolicy: Always
----
-kind: Service
-apiVersion: v1
-metadata:
-  name: spring-boot-app
-spec:
-  type: NodePort
-  ports:
-    - port: 8085
-      targetPort: 8085
-      protocol: TCP
-      nodePort: 31000
-  selector:
-    app: spring-boot-app-demo
