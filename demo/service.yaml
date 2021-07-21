@@ -8,6 +8,7 @@ spec:
   selector:
     app: demo
   ports:
-    - protocol: TCP
+    - name: default
+      protocol: TCP
       port: 85
       targetPort: 8085
