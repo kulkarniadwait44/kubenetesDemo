@@ -17,5 +17,6 @@ spec:
       containers:
       - name: demo
         image: demo:1.0.0
+        imagePullPolicy: Always
         ports:
         - containerPort: 85
