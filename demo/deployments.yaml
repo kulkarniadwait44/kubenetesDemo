@@ -22,7 +22,7 @@ spec:
       labels:
         app: demo
     spec:
-      hostname: busybox-1
+      hostname: demo
       subdomain: default-subdomain
       containers:
       - name: demo
