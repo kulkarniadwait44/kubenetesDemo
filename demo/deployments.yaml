@@ -18,7 +18,7 @@ spec:
       subdomain: default-subdomain
       containers:
       - name: demo
-        image: kulkarniadwait/demo:1.0.0
+        image: kulkarniadwait44/demo:1.0.0
         imagePullPolicy: Always
         ports:
         - containerPort: 85
