@@ -1,4 +1,12 @@
-apiVersion: apps/v1
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mongodb-configmap
+data:
+  db_host: mongodb-service
+
+---
+apiVersion: v1
 kind: Deployment
 metadata:
   name: demo 
@@ -21,4 +29,10 @@ spec:
         image: kulkarniadwait44/demo:1.0.0
         imagePullPolicy: Always
         ports:
-        - containerPort: 85
+        - containerPort: 8085
+        env: 
+        - name: APPLICATION_PROPERTIES_HOSTNAME
+          valueFrom: 
+            configMapKeyRef:
+              name: mongodb-configmap
+              key: db_host
