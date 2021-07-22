@@ -12,6 +12,8 @@ public class DemoApplication {
 	
 	@Value("${APPLICATION_PROPERTIES_HOSTNAME}")
 	String hostName;
+	@Value("${st.tmeplate}")
+	String hostNameAdwait;
 	
 	
 	public static void main(String[] args) {
@@ -19,6 +21,6 @@ public class DemoApplication {
 	}
 	@RequestMapping("/hello")
 	public String index() {
-		return "Greetings from Spring Boot!"+hostName;
+		return "Greetings from applicaiton : "+hostNameAdwait +"..!! Greetings from kubernets: "+hostName;
 	}
 }
