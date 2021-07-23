@@ -9,3 +9,4 @@ spec:
     - protocol: TCP
       port: 86
       targetPort: 8086
+      nodePort: 30007
