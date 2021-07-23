@@ -7,6 +7,7 @@ docker build -t demo .
 docker login -u "kulkarniadwait44" -p "Mimo#1234"
 docker tag $(docker images demo --format "{{.ID}}") kulkarniadwait44/demo:1.0.0
 docker push kulkarniadwait44/demo:1.0.0
+cd demo
 docker apply -f service.yaml
 docker apply -f deployment.yaml
 kubectl expose deployment demo --type=NodePort --port=8085 --name=demo-service
