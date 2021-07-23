@@ -24,7 +24,7 @@ public class DemoApplication {
 		String str=""; 
 		
 		str = "Greetings from Spring Boot Caller";
-		str = str + "  "+restTemplate.getForObject("http://demo-service/hello", String.class);
+		str = str + "  "+restTemplate.getForObject("http://demo-service:8085/hello", String.class);
 				
 		
 		return str;
