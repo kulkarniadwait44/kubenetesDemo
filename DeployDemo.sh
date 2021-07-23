@@ -12,7 +12,7 @@ kubectl apply -f service.yaml
 kubectl apply -f deployments.yaml
 #kubectl expose deployment demo --type=NodePort --port=8085 --name=demo-svc
 cd ..
-cd /demo-caller
+cd demo-caller
 chmod +x ./mvnw
 ./mvnw package && java -jar target/demo-caller
 docker build -t demo-caller .
