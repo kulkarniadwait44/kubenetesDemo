@@ -9,5 +9,7 @@ spec:
   ports:
   - name: default
     protocol: TCP
+
     port: 8086 change change two
+
     targetPort: 8086
