@@ -12,12 +12,12 @@ spec:
   template:
     metadata:
       labels:
-        app: dockerlogin
+        app: rediscaller
     spec:
       hostname: rediscaller
       subdomain: default-subdomain
       imagePullSecrets:
-      - name: regcred
+      - name: dockerlogin
       containers:
       - name: rediscaller
         image: kulkarniadwait44/rediscaller:1.0.0
