@@ -16,6 +16,8 @@ spec:
     spec:
       hostname: rediscaller
       subdomain: default-subdomain
+      imagePullSecrets:
+      - name: regcred
       containers:
       - name: rediscaller
         image: kulkarniadwait44/rediscaller:1.0.0
