@@ -8,7 +8,7 @@ data:
     maxmemory-policy allkeys-lru 
 ---
 apiVersion: v1
-kind: Deployment
+kind: pod
 metadata:
   name: redis
 spec:
