@@ -12,7 +12,7 @@ spec:
   template:
     metadata:
       labels:
-        app: rediscaller
+        app: dockerlogin
     spec:
       hostname: rediscaller
       subdomain: default-subdomain
