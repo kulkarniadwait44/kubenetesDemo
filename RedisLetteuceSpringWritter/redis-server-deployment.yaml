@@ -44,13 +44,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: redis-svc
+  name: redis
+  labels:
+    app: redis
 spec:
-  type: LoadBalancer
+  ports:
+    - port: 6379
+      targetPort: 6379
   selector:
     app: redis
-  ports:
-  - name: default
-    protocol: TCP
-    port: 6379
-    targetPort: 6379
