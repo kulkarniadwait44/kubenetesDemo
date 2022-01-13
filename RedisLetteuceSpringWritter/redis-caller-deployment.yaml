@@ -26,7 +26,7 @@ spec:
         - containerPort: 8085
         env: 
         - name: redis.host
-          value: http://redis-svc
+          value: redis
         - name: redis.port
           value: "6379"
         - name: server.port
